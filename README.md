@@ -1,4 +1,4 @@
-# 🐍 My Python Engineering Journey
+# 🐍 My Python Learning Journey
 
 ### _From Terminal Scripts to Containerized Production Systems_
 
