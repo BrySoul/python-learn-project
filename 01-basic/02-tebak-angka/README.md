@@ -40,13 +40,3 @@ Program permainan CLI interaktif di mana komputer mengacak sebuah angka dari 1 h
 | `percobaan -= 1` & `continue`  | Mengembalikan nilai hitungan percobaan dan mengulang loop ke atas agar kesempatan pemain tidak hangus akibat kesalahan input.           |
 | `if tebakan == angka_rahasia:` | Memeriksa apakah tebakan cocok dengan angka acak komputer.                                                                              |
 | `while ... else:`              | Blok `else` pada akhir loop hanya berjalan jika perulangan `while` selesai hingga kesempatan ke-7 tanpa kena `break`.                   |
-
----
-
-## 🚀 Cara Menjalankan Program
-
-Buka terminal di direktori project dan jalankan:
-
-```bash
-python main.py
-```

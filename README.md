@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # 🐍 My Python Engineering Journey
+=======
+# 🐍 My Python Learning Journey
+>>>>>>> 4f7733b3bad2dd1dd11c8f0b34e55a3c305683da
 
 ### _From Terminal Scripts to Containerized Production Systems_
 
@@ -11,7 +15,11 @@
 
 | Level & Chapter                               | Core Focus & Concepts                                                   | Primary Tech & Libraries                             | Key Milestones                                                |
 | --------------------------------------------- | ----------------------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------- |
+<<<<<<< HEAD
 | **01. Foundations**<br>_(Basic Logic)_        | Syntax, Control Flow, Data Structures, Functions, String Processing     | `Python 3.12`, `Built-in Modules`                    | Mastering algorithmic logic without 3rd-party packages        |
+=======
+| **01. Foundations**<br>_(Basic Logic)_        | Syntax, Control Flow, Data Structures, Functions, String Processing     | `Python`, `Built-in Modules`                    | Mastering algorithmic logic without 3rd-party packages        |
+>>>>>>> 4f7733b3bad2dd1dd11c8f0b34e55a3c305683da
 | **02. Architecture**<br>_(OOP & Persistence)_ | Classes/OOP, JSON/CSV I/O, SQLite Databases, Error Handling, Logging    | `SQLite3`, `json`, `logging`, `datetime`             | Building modular, persistent CLI tools with custom exceptions |
 | **03. Integration**<br>_(Async & Automation)_ | Asynchronous I/O, REST APIs, Web Scraping, OS Automation, Webhooks      | `asyncio`, `httpx`, `BeautifulSoup4`, `Playwright`   | Transitioning to non-blocking I/O and web integration         |
 | **04. Enterprise**<br>_(Backend & Systems)_   | Async REST APIs, ORM/Migrations, JWT Auth, Caching, Task Queues, Docker | `FastAPI`, `SQLAlchemy`, `Redis`, `Celery`, `Docker` | Architecting containerized, production-grade microservices    |

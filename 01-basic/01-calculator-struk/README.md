@@ -50,13 +50,3 @@ Program CLI (Command Line Interface) interaktif untuk menerima masukan data toko
 | `sum(item[3] for item in daftar_barang)`     | Mengambil elemen indeks ke-3 (subtotal) dari setiap tuple di dalam list lalu menjumlahkannya.              |
 | `enumerate(..., start=1)`                    | Menghasilkan pasangan `(1, item1)`, `(2, item2)`, dst., untuk nomor struk.                                 |
 | `f"{barang:<15} {qty:<5}"`                   | Menjamin kolom nama barang selalu selebar 15 spasi dan kuantitas selebar 5 spasi agar tabel struk sejajar. |
-
----
-
-## 🚀 Cara Menjalankan Program
-
-Buka terminal di direktori project dan jalankan:
-
-```bash
-python main.py
-```
