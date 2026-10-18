@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# 🐍 My Python Engineering Journey
-=======
 # 🐍 My Python Learning Journey
->>>>>>> 4f7733b3bad2dd1dd11c8f0b34e55a3c305683da
 
 ### _From Terminal Scripts to Containerized Production Systems_
 
