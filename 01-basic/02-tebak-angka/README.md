@@ -1,42 +1,44 @@
-# Project 02: Game Tebak Angka dengan Batas Kesempatan
+# Project: Number Guessing Game with Limited Attempts
 
-## 📌 Deskripsi Project
+📌 **Project Description**
 
-Program permainan CLI interaktif di mana komputer mengacak sebuah angka dari 1 hingga 100, dan pemain bertugas menebak angka tersebut dalam batas maksimal 7 kali percobaan. Program memberikan respon real-time apakah angka tebakan pemain terlalu besar atau terlalu kecil.
+An interactive CLI (Command Line Interface) program where the computer generates a secret random number between 1 and 100, and the player attempts to guess it within a limited number of tries. The program provides dynamic feedback ("Too high" or "Too low") after each attempt, validates user inputs to prevent crashes from invalid entries, and tracks remaining attempts until a win or "Game Over" state is reached.
 
----
+🧠 **Python Concepts Learned**
 
-## 🧠 Konsep Python yang Dipelajari
+1. **Input/Output & Type Casting**
+   - `input()` : Captures text input from the user via terminal.
+   - `int()` : Converts default string input into an integer (`int`) so mathematical comparisons can be performed.
+   - `print()` : Displays instructions, dynamic hints, UI dividers, and game status to the screen.
 
-### 1. Modul Bawaan (`import random`)
+2. **Control Flow**
+   - `while attempts < max_attempts` : Creates a conditional loop that continues running as long as attempts remain.
+   - `if-elif-else` : Evaluates whether a guess is too low, too high, or correct.
+   - `while ... else` : Triggers the "Game Over" block automatically if the loop completes without hitting a `break`.
+   - `break` : Stops the loop immediately when the user successfully guesses the secret number.
+   - `continue` : Skips the rest of the current iteration when an invalid non-numeric input is provided.
 
-- **`random.randint(a, b)`**: Menggenerasi angka bulat acak dalam rentang inklusif antara `a` sampai `b`.
+3. **Randomization & Validation**
+   - `random.randint(1, 100)` : Generates a pseudo-random target integer between 1 and 100 (inclusive).
+   - `.isdigit()` : String method used to verify that user input consists only of numeric characters, avoiding runtime errors.
 
-### 2. Pengondisian Lanjutan (`if-elif-else`)
+4. **Advanced String Formatting (f-string)**
+   - `:^45` : Centers text horizontally within a fixed 45-character line width.
+   - `f"..."` : Injects expressions and variables (e.g., attempt counters, remaining tries) directly inside strings.
 
-- Membandingkan nilai `tebakan` dengan `angka_rahasia` untuk menentukan petunjuk arah tebakan (terlalu kecil, terlalu besar, atau benar).
 
-### 3. Kontrol Perulangan (`while-else`, `break`, `continue`)
+🔍 **Line-by-Line Code Explanation**
 
-- **`while percobaan < batas_kesempatan`**: Mengulang proses tebakan selama jatah kesempatan masih ada.
-- **`continue`**: Melompati sisa baris di dalam loop dan langsung kembali ke awal perulangan saat terjadi kesalahan input pengguna.
-- **`break`**: Menghentikan permainan secara instan begitu angka rahasia berhasil ditebak.
-- **Blok `else` pada `while`**: Fitur khusus Python di mana blok `else` dieksekusi **hanya jika** loop selesai secara alami tanpa dihentikan oleh perintah `break` (menandakan pemain kehabisan kesempatan).
-
-### 4. Penanganan Error Dasar (`try-except`)
-
-- Menggunakan `try-except ValueError` untuk mencegah program mendadak _crash_ jika pengguna menginput karakter selain angka bulat.
-
----
-
-## 🔍 Penjelasan Kode Baris demi Baris
-
-| Baris Kode                     | Fungsi & Penjelasan                                                                                                                     |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `import random`                | Mengimpor library standar Python untuk membuat bilangan acak.                                                                           |
-| `random.randint(1, 100)`       | Menghasilkan angka acak dari 1 sampai 100 dan menyimpannya di variabel `angka_rahasia`.                                                 |
-| `try: tebakan = int(...)`      | Mencoba mengonversi input pengguna menjadi bilangan bulat; jika gagal (misal user mengetik huruf), eksekusi berpindah ke blok `except`. |
-| `except ValueError:`           | Menangkap error tipe nilai dan menampilkan pesan peringatan tanpa menghentikan jalurnya program.                                        |
-| `percobaan -= 1` & `continue`  | Mengembalikan nilai hitungan percobaan dan mengulang loop ke atas agar kesempatan pemain tidak hangus akibat kesalahan input.           |
-| `if tebakan == angka_rahasia:` | Memeriksa apakah tebakan cocok dengan angka acak komputer.                                                                              |
-| `while ... else:`              | Blok `else` pada akhir loop hanya berjalan jika perulangan `while` selesai hingga kesempatan ke-7 tanpa kena `break`.                   |
+| Code Line | Function & Explanation |
+| :--- | :--- |
+| `import random` | Imports Python's built-in random module to access number generation functions. |
+| `secret_number = random.randint(1, 100)` | Generates and assigns a random target integer between 1 and 100 to `secret_number`. |
+| `max_attempts = 7` | Sets the maximum allowed guesses per game session. |
+| `while attempts < max_attempts:` | Begins the guessing loop, continuing until the maximum attempt threshold is reached. |
+| `if not user_input.isdigit():` | Checks if the user entered anything other than digits (e.g., letters or symbols). |
+| `continue` | Skips attempt incrementing and restarts the loop prompt when input validation fails. |
+| `guess = int(user_input)` | Converts the validated text input into a numeric integer. |
+| `attempts += 1` | Increments the used attempt counter by 1. |
+| `if guess < secret_number:` | Compares the guess against the target and provides a "Too low" feedback message. |
+| `break` | Exits the loop immediately upon a correct guess to prevent further prompts. |
+| `else:` *(after while loop)* | Executes only when the `while` loop finishes naturally without being interrupted by `break`. |
